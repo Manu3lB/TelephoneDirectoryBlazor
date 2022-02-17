@@ -12,35 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -37434944,
+        "HashCode": 284247039,
         "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.FetchData",
+        "Name": "BlazorTelephoneDirectory.Pages.AddContact",
         "AssemblyName": "BlazorTelephoneDirectory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FetchData"
+            "TagName": "AddContact"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.FetchData"
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.AddContact"
         }
       },
       {
-        "HashCode": -703797556,
+        "HashCode": -716061449,
         "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.FetchData",
+        "Name": "BlazorTelephoneDirectory.Pages.AddContact",
         "AssemblyName": "BlazorTelephoneDirectory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorTelephoneDirectory.Pages.FetchData"
+            "TagName": "BlazorTelephoneDirectory.Pages.AddContact"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.FetchData",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.AddContact",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -78,35 +78,200 @@
         }
       },
       {
-        "HashCode": 284247039,
+        "HashCode": -2110503129,
         "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.AddContact",
+        "Name": "BlazorTelephoneDirectory.Pages.DeleteContact",
         "AssemblyName": "BlazorTelephoneDirectory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "AddContact"
+            "TagName": "DeleteContact"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.AddContact"
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DeleteContact"
         }
       },
       {
-        "HashCode": -716061449,
+        "HashCode": -1048471188,
         "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.AddContact",
+        "Name": "BlazorTelephoneDirectory.Pages.DeleteContact",
         "AssemblyName": "BlazorTelephoneDirectory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorTelephoneDirectory.Pages.AddContact"
+            "TagName": "BlazorTelephoneDirectory.Pages.DeleteContact"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.AddContact",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DeleteContact",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -2032639748,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.DirectoryFull",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DirectoryFull"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryFull"
+        }
+      },
+      {
+        "HashCode": -1936740024,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.DirectoryFull",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorTelephoneDirectory.Pages.DirectoryFull"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryFull",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -937132505,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DirectoryWhitSpace"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace"
+        }
+      },
+      {
+        "HashCode": 1143996070,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1050418174,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.ExistsContact",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ExistsContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.ExistsContact"
+        }
+      },
+      {
+        "HashCode": 317950705,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.ExistsContact",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorTelephoneDirectory.Pages.ExistsContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.ExistsContact",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1511565819,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.Exit",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Exit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.Exit"
+        }
+      },
+      {
+        "HashCode": -1507518448,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.Exit",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorTelephoneDirectory.Pages.Exit"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.Exit",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -37434944,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.FetchData",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": -703797556,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.Pages.FetchData",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorTelephoneDirectory.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -177,105 +342,6 @@
         }
       },
       {
-        "HashCode": -1050418174,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.ExistsContact",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ExistsContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.ExistsContact"
-        }
-      },
-      {
-        "HashCode": 317950705,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.ExistsContact",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.Pages.ExistsContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.ExistsContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -2110503129,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.DeleteContact",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DeleteContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DeleteContact"
-        }
-      },
-      {
-        "HashCode": -1048471188,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.DeleteContact",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.Pages.DeleteContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DeleteContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -937132505,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DirectoryWhitSpace"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace"
-        }
-      },
-      {
-        "HashCode": 1143996070,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryWhitSpace",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1187435786,
         "Kind": "Components.Component",
         "Name": "BlazorTelephoneDirectory.Pages.SearchContact",
@@ -309,68 +375,35 @@
         }
       },
       {
-        "HashCode": -2032639748,
+        "HashCode": 1342796616,
         "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.DirectoryFull",
+        "Name": "BlazorTelephoneDirectory.App",
         "AssemblyName": "BlazorTelephoneDirectory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "DirectoryFull"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryFull"
+          "Common.TypeName": "BlazorTelephoneDirectory.App"
         }
       },
       {
-        "HashCode": -1936740024,
+        "HashCode": 1590513129,
         "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.DirectoryFull",
+        "Name": "BlazorTelephoneDirectory.App",
         "AssemblyName": "BlazorTelephoneDirectory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorTelephoneDirectory.Pages.DirectoryFull"
+            "TagName": "BlazorTelephoneDirectory.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.DirectoryFull",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1511565819,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.Exit",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Exit"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.Exit"
-        }
-      },
-      {
-        "HashCode": -1507518448,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.Exit",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.Pages.Exit"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.Exit",
+          "Common.TypeName": "BlazorTelephoneDirectory.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -553,39 +586,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorTelephoneDirectory.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1342796616,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.App",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.App"
-        }
-      },
-      {
-        "HashCode": 1590513129,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.App",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
