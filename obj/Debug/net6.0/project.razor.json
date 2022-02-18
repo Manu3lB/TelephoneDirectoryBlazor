@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 284247039,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.AddContact",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "AddContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.AddContact"
-        }
-      },
-      {
-        "HashCode": -716061449,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.AddContact",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.Pages.AddContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.AddContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1460011385,
         "Kind": "Components.Component",
         "Name": "BlazorTelephoneDirectory.Pages.Counter",
@@ -243,39 +210,6 @@
         }
       },
       {
-        "HashCode": -37434944,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.FetchData",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": -703797556,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.Pages.FetchData",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1299629197,
         "Kind": "Components.Component",
         "Name": "BlazorTelephoneDirectory.Pages.Index",
@@ -371,39 +305,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorTelephoneDirectory.Pages.SearchContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1342796616,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.App",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.App"
-        }
-      },
-      {
-        "HashCode": 1590513129,
-        "Kind": "Components.Component",
-        "Name": "BlazorTelephoneDirectory.App",
-        "AssemblyName": "BlazorTelephoneDirectory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTelephoneDirectory.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorTelephoneDirectory.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -586,6 +487,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorTelephoneDirectory.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1342796616,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.App",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.App"
+        }
+      },
+      {
+        "HashCode": 1590513129,
+        "Kind": "Components.Component",
+        "Name": "BlazorTelephoneDirectory.App",
+        "AssemblyName": "BlazorTelephoneDirectory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorTelephoneDirectory.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorTelephoneDirectory.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16875,11 +16809,6 @@
   },
   "RootNamespace": "BlazorTelephoneDirectory",
   "Documents": [
-    {
-      "FilePath": "c:\\Users\\jmbarraganm\\Desktop\\Siesa\\.Net\\BlazorTelephoneDirectory\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
     {
       "FilePath": "c:\\Users\\jmbarraganm\\Desktop\\Siesa\\.Net\\BlazorTelephoneDirectory\\Pages\\AddContact.razor",
       "TargetPath": "Pages\\AddContact.razor",
