@@ -4592,68 +4592,35 @@
         }
       },
       {
-        "HashCode": -1096700081,
+        "HashCode": -1844554059,
         "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.Counter",
+        "Name": "BlazorDirectory.Client.Pages.AddContact",
         "AssemblyName": "BlazorDirectory.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "AddContact"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.Counter"
+          "Common.TypeName": "BlazorDirectory.Client.Pages.AddContact"
         }
       },
       {
-        "HashCode": 1396756667,
+        "HashCode": -1127205422,
         "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.Counter",
+        "Name": "BlazorDirectory.Client.Pages.AddContact",
         "AssemblyName": "BlazorDirectory.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorDirectory.Client.Pages.Counter"
+            "TagName": "BlazorDirectory.Client.Pages.AddContact"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1714881473,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.FetchData",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": 309512149,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.FetchData",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorDirectory.Client.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.FetchData",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.AddContact",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -4687,6 +4654,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorDirectory.Client.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 780816935,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.ListContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ListContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.ListContact"
+        }
+      },
+      {
+        "HashCode": -1013541567,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.ListContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDirectory.Client.Pages.ListContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.ListContact",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -436275418,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.SearchContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SearchContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.SearchContact"
+        }
+      },
+      {
+        "HashCode": -1444207893,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.SearchContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDirectory.Client.Pages.SearchContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.SearchContact",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

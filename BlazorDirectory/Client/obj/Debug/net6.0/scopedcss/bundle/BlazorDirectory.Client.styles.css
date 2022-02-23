@@ -22,17 +22,12 @@ main[b-zmebq9xcj9] {
     align-items: center;
 }
 
-    .top-row[b-zmebq9xcj9]  a, .top-row[b-zmebq9xcj9]  .btn-link {
+    .top-row[b-zmebq9xcj9]  a, .top-row .btn-link[b-zmebq9xcj9] {
         white-space: nowrap;
         margin-left: 1.5rem;
-        text-decoration: none;
     }
 
-    .top-row[b-zmebq9xcj9]  a:hover, .top-row[b-zmebq9xcj9]  .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row[b-zmebq9xcj9]  a:first-child {
+    .top-row a:first-child[b-zmebq9xcj9] {
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -46,7 +41,7 @@ main[b-zmebq9xcj9] {
         justify-content: space-between;
     }
 
-    .top-row[b-zmebq9xcj9]  a, .top-row[b-zmebq9xcj9]  .btn-link {
+    .top-row a[b-zmebq9xcj9], .top-row .btn-link[b-zmebq9xcj9] {
         margin-left: 0;
     }
 }
@@ -69,29 +64,24 @@ main[b-zmebq9xcj9] {
         z-index: 1;
     }
 
-    .top-row.auth[b-zmebq9xcj9]  a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
     .top-row[b-zmebq9xcj9], article[b-zmebq9xcj9] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
 }
+
 /* /Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-5yf72uukpp] {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .top-row[b-5yf72uukpp] {
-    height: 3.5rem;
+    height: 4.5rem;
     background-color: rgba(0,0,0,0.4);
 }
 
 .navbar-brand[b-5yf72uukpp] {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
 }
 
 .oi[b-5yf72uukpp] {
@@ -103,11 +93,11 @@ main[b-zmebq9xcj9] {
 
 .nav-item[b-5yf72uukpp] {
     font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1.5rem;
 }
 
     .nav-item:first-of-type[b-5yf72uukpp] {
-        padding-top: 1rem;
+        padding-top: 2rem;
     }
 
     .nav-item:last-of-type[b-5yf72uukpp] {
@@ -116,12 +106,16 @@ main[b-zmebq9xcj9] {
 
     .nav-item[b-5yf72uukpp]  a {
         color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
+        border-radius: 12px;
+        height: 4rem;
         display: flex;
         align-items: center;
-        line-height: 3rem;
-    }
+        line-height: 1.4rem;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
 
 .nav-item[b-5yf72uukpp]  a.active {
     background-color: rgba(255,255,255,0.25);

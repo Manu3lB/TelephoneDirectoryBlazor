@@ -9,67 +9,126 @@ namespace BlazorTelephoneDirectory.Controller
     public class ContactController : ControllerBase
     {
         private readonly ContactContext _context;
-
+        private int size = 3;
         public ContactController(ContactContext context)
         {
             _context = context;
         }
-        [HttpGet]
+
+        [HttpGet("listContact")]
         public List<Contact> GetContacts()
         {
             return _context.Contacts.ToList();
         }
-        // [HttpGet]
-        // public Contact GetContactById(int id)
-        // {
-        //     return _context.Contacts.SingleOrDefault(e => e.ContactId == id);
-        // }
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteContact(int id)
+        [HttpPost("addContact")]
+        public IActionResult AddContact(Contact contact)
         {
-            var cont = _context.Contacts.SingleOrDefault(x => x.ContactId == id);
+            int directoryCount = size - _context.Contacts.ToList().Count();
+            if (directoryCount > 0)
+            {
+                _context.Contacts.Add(contact);
+                _context.SaveChanges();
+                return Ok(_context.Contacts.ToList());
+            }
+            else
+            {
+                return NotFound("No hay espacio en la agenda");
+            }
+        }
+
+        [HttpGet("searchContact/{name}")]
+        public IActionResult GetContactSearchName(string name)
+        {
+            var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
+
+            if (_contact == null)
+            {
+                return NotFound("Contacto con el nombre de " + name + " no se encontro en el directorio");
+            }
+
+            return Ok("Contacto con el nombre de " + name + " se encuentra en el directorio");
+        }
+
+        [HttpGet("existContact/{name}")]
+        public IActionResult GetContactExistName(string name)
+        {
+            var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
+
+            if (_context.Contacts.ToList().Count() > 0)
+            {
+                if (_contact == null)
+                {
+                    return NotFound("No existe este contacto en el directorio");
+                }
+            }
+            return Ok("El contacto si existe en el directorio");
+        }
+
+        [HttpDelete("deleteContact/{name}")]
+        public IActionResult DeleteContact(string name)
+        {
+            var cont = _context.Contacts.SingleOrDefault(x => x.name == name);
             if (cont == null)
             {
-                return NotFound("Contacto con el Id " + id + " no existe");
+                return NotFound("Contacto con el nombre " + name + " no existe en el directorio");
             }
             _context.Contacts.Remove(cont);
             _context.SaveChanges();
-            return Ok("Contacto con el Id " + id + " eliminado");
+            return Ok("Contacto con el nombre " + name + " ha sido eliminado");
         }
 
-        [HttpPost]
-        public IActionResult AddContact(Contact contact)
+        [HttpGet("spaceContact")]
+        public IActionResult DirectoryWithSpace()
         {
-            _context.Contacts.Add(contact);
-            _context.SaveChanges();
-            return Ok(_context.Contacts.ToList());
+            int directoryWithSpace = 0;
+            directoryWithSpace = size - _context.Contacts.ToList().Count();
+            if (directoryWithSpace > 0)
+            {
+                return Ok("Hay " + directoryWithSpace + " espacios para guardar contactos ");
+            }
+            else
+            {
+                return NotFound("No quedan espacios en el directorio para guardar contactos");
+            }
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateContact(int id, Contact contact)
+        [HttpGet("directoryFull")]
+        public IActionResult DirectoryFull()
         {
-            var cont = _context.Contacts.SingleOrDefault(x => x.ContactId == id);
-            if (cont == null)
+            int directoryCount = size - _context.Contacts.ToList().Count();
+            if (directoryCount > 0)
             {
-                return NotFound("Contacto con el Id " + id + " no existe");
+                return Ok("La agenda aún conserva espacio para agregar contactos.");
+            }else{
+            return NotFound("No hay espacio en la agenda.");
             }
-            if(contact.name != null)
-            {
-                cont.name=contact.name;
-            }
-            if(contact.phoneNumber != null)
-            {
-                cont.phoneNumber=contact.phoneNumber;
-            }
-            if(contact.cellPhone != null)
-            {
-                cont.cellPhone=contact.cellPhone;
-            }
-
-            _context.Update(cont);
-            _context.SaveChanges();
-            return Ok("Contacto con el Id " +id+ " actualido");
         }
+
+        // [HttpPut("{id}")]
+        // public IActionResult UpdateContact(int id, Contact contact)
+        // {
+        //     var cont = _context.Contacts.SingleOrDefault(x => x.ContactId == id);
+        //     if (cont == null)
+        //     {
+        //         return NotFound("Contacto con el Id " + id + " no existe");
+        //     }
+        //     if (contact.name != null)
+        //     {
+        //         cont.name = contact.name;
+        //     }
+        //     if (contact.phoneNumber != null)
+        //     {
+        //         cont.phoneNumber = contact.phoneNumber;
+        //     }
+        //     if (contact.cellPhone != null)
+        //     {
+        //         cont.cellPhone = contact.cellPhone;
+        //     }
+
+        //     _context.Update(cont);
+        //     _context.SaveChanges();
+        //     return Ok("Contacto con el Id " + id + " actualido");
+        // }
     }
 }

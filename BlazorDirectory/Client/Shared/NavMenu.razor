@@ -1,6 +1,6 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">BlazorDirectory</a>
+        <a class="navbar-brand" href="">Directorio Telefonico</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,29 +11,49 @@
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="ListContact">
-                <span class="oi oi-plus" aria-hidden="true"></span> List
+                <span class="oi oi-home" aria-hidden="true"></span> HOME
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="AddContact">
-                <span class="oi oi-plus" aria-hidden="true"></span> AddContact
+                <span class="oi oi-home" aria-hidden="true"></span> ADICIONAR CONTACTO
             </NavLink>
         </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ListContact">
+                <span class="oi oi-home" aria-hidden="true"></span> LISTAR CONTACTOS
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="SearchContact">
+                <span class="oi oi-home" aria-hidden="true"></span> BUSCAR CONTACTOS
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ExistsContact">
+                <span class="oi oi-home" aria-hidden="true"></span> EXISTE CONTACTO
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="DeleteContact">
+                <span class="oi oi-home" aria-hidden="true"></span> ELIMINAR CONTACTO
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="DirectoryWhitSpace">
+                <span class="oi oi-home" aria-hidden="true"></span> CONTACTOS DISPONIBLES
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="DirectoryFull">
+                <span class="oi oi-home" aria-hidden="true"></span> AGENDA LLENA
+            </NavLink>
+        </div>
+        @* <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Exit">
+                <span class="oi oi-home" aria-hidden="true"></span> SALIR
+            </NavLink>
+        </div> *@
     </nav>
 </div>
 

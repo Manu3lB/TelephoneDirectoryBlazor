@@ -2,7 +2,7 @@
 @using BlazorDirectory.Shared;
 @inject HttpClient Http
 @inject NavigationManager Navigation
-<h3>Add Contact</h3>
+<h3>Agregar Contactos</h3>
 <EditForm Model="@_contact" OnValidSubmit="Post">
     <div class="form-group">
         <label>Name Contact: </label>
@@ -24,7 +24,7 @@
     private Contact _contact = new();
     private async Task Post()
     {
-        await Http.PostAsJsonAsync<Contact>("/api/contact", _contact);
+        await Http.PostAsJsonAsync<Contact>("/api/contact/addContact", _contact);
         Navigation.NavigateTo($"/listContact");
     }
 }
