@@ -9,7 +9,7 @@ namespace BlazorTelephoneDirectory.Controller
     public class ContactController : ControllerBase
     {
         private readonly ContactContext _context;
-        private int size = 3;
+        private int size = 10;
         public ContactController(ContactContext context)
         {
             _context = context;
@@ -38,58 +38,64 @@ namespace BlazorTelephoneDirectory.Controller
         }
 
         [HttpGet("searchContact/{name}")]
-        public IActionResult GetContactSearchName(string name)
+        public string GetContactSearchName(string name)
         {
             var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
-
+            string message = "";
             if (_contact == null)
             {
-                return NotFound("Contacto con el nombre de " + name + " no se encontro en el directorio");
+                message = "Contacto con el nombre de " + name + " no se encontro en el directorio";
+                return message;
             }
-
-            return Ok("Contacto con el nombre de " + name + " se encuentra en el directorio");
+            message = "Contacto con el nombre de " + name + " se encuentra en el directorio";
+            return message;
         }
 
         [HttpGet("existContact/{name}")]
-        public IActionResult GetContactExistName(string name)
+        public string GetContactExistName(string name)
         {
             var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
-
+            string message = "";
             if (_context.Contacts.ToList().Count() > 0)
             {
-                if (_contact == null)
+                if (_contact != null)
                 {
-                    return NotFound("No existe este contacto en el directorio");
+                    message = "El contacto si existe en el directorio";
+                    return message;
                 }
             }
-            return Ok("El contacto si existe en el directorio");
+            message = "No existe este contacto en el directorio";
+            return message;
         }
 
         [HttpDelete("deleteContact/{name}")]
         public IActionResult DeleteContact(string name)
         {
-            var cont = _context.Contacts.SingleOrDefault(x => x.name == name);
-            if (cont == null)
+            var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
+            if (_contact == null )
             {
                 return NotFound("Contacto con el nombre " + name + " no existe en el directorio");
             }
-            _context.Contacts.Remove(cont);
+            _context.Contacts.Remove(_contact);
             _context.SaveChanges();
             return Ok("Contacto con el nombre " + name + " ha sido eliminado");
         }
 
         [HttpGet("spaceContact")]
-        public IActionResult DirectoryWithSpace()
+        public string DirectoryWithSpace()
         {
             int directoryWithSpace = 0;
+            string message= "";
             directoryWithSpace = size - _context.Contacts.ToList().Count();
             if (directoryWithSpace > 0)
             {
-                return Ok("Hay " + directoryWithSpace + " espacios para guardar contactos ");
+                message = "Hay " + directoryWithSpace + " espacios para guardar contactos ";
+                return message;
             }
             else
             {
-                return NotFound("No quedan espacios en el directorio para guardar contactos");
+                message = "No quedan espacios en el directorio para guardar contactos";
+                return message;
             }
         }
 
@@ -100,8 +106,10 @@ namespace BlazorTelephoneDirectory.Controller
             if (directoryCount > 0)
             {
                 return Ok("La agenda aún conserva espacio para agregar contactos.");
-            }else{
-            return NotFound("No hay espacio en la agenda.");
+            }
+            else
+            {
+                return NotFound("No hay espacio en la agenda.");
             }
         }
 

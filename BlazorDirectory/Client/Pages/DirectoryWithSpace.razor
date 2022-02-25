@@ -1,8 +1,8 @@
-@page "/DirectoryFull"
+@page "/DirectoryWhitSpace"
 @using BlazorDirectory.Shared;
 @inject HttpClient Http
 @inject NavigationManager Navigation
-<h3>Agenda llena</h3>
+<h3>Contactos Disponibles</h3>
 
 <div class="alert alert-secondary mt-4">
     <span class="oi oi-person me-2" aria-hidden="true"></span>
@@ -20,7 +20,7 @@
 
     private async Task DirectoryWhitSpaces()
     {
-        string info = await Http.GetStringAsync("https://localhost:7163/api/contact/directoryFull/");
+        string info = await Http.GetStringAsync("https://localhost:7163/api/contact/spaceContact/");
         message = info;
     }
 }
