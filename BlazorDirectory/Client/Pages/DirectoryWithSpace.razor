@@ -4,6 +4,12 @@
 @inject NavigationManager Navigation
 <h3>Contactos Disponibles</h3>
 
+<EditForm Model="@_contact">
+    <div class="form-group">
+        <button type="submit" class="btn btn-success" @onclick="(() => DirectoryWhitSpaces())">Directorio con espacio</button>
+    </div>
+</EditForm>
+
 <div class="alert alert-secondary mt-4">
     <span class="oi oi-person me-2" aria-hidden="true"></span>
     <strong>Información del directorio telefonico</strong><br><br>

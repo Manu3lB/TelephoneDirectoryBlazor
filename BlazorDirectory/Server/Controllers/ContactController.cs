@@ -100,16 +100,19 @@ namespace BlazorTelephoneDirectory.Controller
         }
 
         [HttpGet("directoryFull")]
-        public IActionResult DirectoryFull()
+        public string DirectoryFull()
         {
             int directoryCount = size - _context.Contacts.ToList().Count();
+            string message= "";
             if (directoryCount > 0)
             {
-                return Ok("La agenda aún conserva espacio para agregar contactos.");
+                message = "La agenda aún conserva espacio para agregar contactos.";
+                return message;
             }
             else
             {
-                return NotFound("No hay espacio en la agenda.");
+                message = "No hay espacio en la agenda.";
+                return message;
             }
         }
 

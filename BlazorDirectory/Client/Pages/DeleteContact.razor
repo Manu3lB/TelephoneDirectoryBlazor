@@ -28,9 +28,9 @@
 
     private async Task DeleteContacts(string name)
     {
-        var info = await Http.DeleteAsync($"https://localhost:7163/api/contact/deleteContact/{name}");
-        
-        if(info == null){
+        HttpResponseMessage responseDelete = await Http.DeleteAsync($"https://localhost:7163/api/contact/deleteContact/{name}");
+
+        if(!responseDelete.IsSuccessStatusCode){
             message = "No existe el contacto " +name+ " en el directorio telefonico";
         }else{
             message = "Contacto " +name+ " eliminado con exito";
