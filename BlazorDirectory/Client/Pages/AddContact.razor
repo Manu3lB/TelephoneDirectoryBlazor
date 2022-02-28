@@ -5,18 +5,22 @@
 <h3>Agregar Contactos</h3>
 
 <EditForm Model="@_contact" OnValidSubmit="Post">
+    <DataAnnotationsValidator/>
     <div class="container-fluid">
         <div class="form-group" row mb-1>
             <label>Nombre Contacto </label>
             <InputText class="form-control" @bind-Value="_contact.name" />
+            <ValidationMessage For="@(() => _contact.name)" />
         </div>
         <div class="form-group" row mb-1>
             <label>Telefono</label>
-            <InputText class="form-control" @bind-Value="_contact.phoneNumber" />
+            <InputText class="form-control" type="number" @bind-Value="_contact.phoneNumber" />
+            <ValidationMessage For="@(() => _contact.phoneNumber)" />
         </div>
         <div class="form-group" row mb-1>
             <label>Celular</label>
-            <InputText class="form-control" @bind-Value="_contact.cellPhone" />
+            <InputText class="form-control" type="number" @bind-Value="_contact.cellPhone" />
+            <ValidationMessage For="@(() => _contact.cellPhone)" />
         </div>
         <br>
         <div class="form-group" row mb-1>

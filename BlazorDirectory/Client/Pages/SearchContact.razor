@@ -5,9 +5,10 @@
 <h3>Buscar contacto</h3>
 
 <EditForm Model="@_contact">
+    <DataAnnotationsValidator />
     <div class="form-group">
         <label>Nombre: </label>
-        <InputText @bind-Value="name" />
+        <InputText @bind-Value=" name" />
         <button type="submit" class="btn btn-success" @onclick="(() => SearchContacts(name))">Buscar Contacto</button>
     </div>
 </EditForm>
@@ -31,7 +32,7 @@
 
     private async Task SearchContacts(string name)
     {
-        string info = await Http.GetStringAsync($"https://localhost:7163/api/contact/searchContact/{name}");
-        message = info;
+        string searchResponse = await Http.GetStringAsync($"https://localhost:7163/api/contact/searchContact/{name}");
+        message = searchResponse;
     }
 }
