@@ -4790,39 +4790,6 @@
         }
       },
       {
-        "HashCode": 780816935,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.ListContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ListContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.ListContact"
-        }
-      },
-      {
-        "HashCode": -1013541567,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.ListContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorDirectory.Client.Pages.ListContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.ListContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -436275418,
         "Kind": "Components.Component",
         "Name": "BlazorDirectory.Client.Pages.SearchContact",

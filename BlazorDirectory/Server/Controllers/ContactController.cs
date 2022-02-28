@@ -40,21 +40,30 @@ namespace BlazorTelephoneDirectory.Controller
         [HttpGet("searchContact/{name}")]
         public string GetContactSearchName(string name)
         {
-            var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
             string message = "";
-            if (_contact == null)
+            try
             {
-                message = "Contacto con el nombre de " + name + " no se encontro en el directorio";
+                var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
+                if (_contact == null)
+                {
+                    message = "Contacto con el nombre de " + name + " no se encontro en el directorio";
+                    return message;
+                }
+                message = "Contacto con el nombre de " + name + " se encuentra en el directorio";
                 return message;
             }
-            message = "Contacto con el nombre de " + name + " se encuentra en el directorio";
-            return message;
+            catch (System.Exception)
+            {
+
+                message = "Error ingrese un nombre, recurde que no se permiten espacios vacios o nulos";
+                return message;
+            }
         }
 
         [HttpGet("existContact/{name}")]
         public string GetContactExistName(string name)
         {
-            var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
+            var _contact = _context.Contacts.FirstOrDefault(x => x.name == name);
             string message = "";
             if (_context.Contacts.ToList().Count() > 0)
             {
@@ -72,7 +81,7 @@ namespace BlazorTelephoneDirectory.Controller
         public IActionResult DeleteContact(string name)
         {
             var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
-            if (_contact == null )
+            if (_contact == null)
             {
                 return NotFound("Contacto con el nombre " + name + " no existe en el directorio");
             }
@@ -85,7 +94,7 @@ namespace BlazorTelephoneDirectory.Controller
         public string DirectoryWithSpace()
         {
             int directoryWithSpace = 0;
-            string message= "";
+            string message = "";
             directoryWithSpace = size - _context.Contacts.ToList().Count();
             if (directoryWithSpace > 0)
             {
@@ -103,7 +112,7 @@ namespace BlazorTelephoneDirectory.Controller
         public string DirectoryFull()
         {
             int directoryCount = size - _context.Contacts.ToList().Count();
-            string message= "";
+            string message = "";
             if (directoryCount > 0)
             {
                 message = "La agenda aún conserva espacio para agregar contactos.";

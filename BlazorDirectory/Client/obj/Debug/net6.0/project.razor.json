@@ -41,72 +41,6 @@
         }
       },
       {
-        "HashCode": -1844554059,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.AddContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "AddContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.AddContact"
-        }
-      },
-      {
-        "HashCode": -1127205422,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.AddContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorDirectory.Client.Pages.AddContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.AddContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1501890919,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.DeleteContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "DeleteContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.DeleteContact"
-        }
-      },
-      {
-        "HashCode": -1397813266,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.DeleteContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorDirectory.Client.Pages.DeleteContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.DeleteContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 2022630836,
         "Kind": "Components.Component",
         "Name": "BlazorDirectory.Client.Pages.DirectoryFull",
@@ -173,39 +107,6 @@
         }
       },
       {
-        "HashCode": -603226060,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.ExistsContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ExistsContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.ExistsContact"
-        }
-      },
-      {
-        "HashCode": 1145297952,
-        "Kind": "Components.Component",
-        "Name": "BlazorDirectory.Client.Pages.ExistsContact",
-        "AssemblyName": "BlazorDirectory.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorDirectory.Client.Pages.ExistsContact"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDirectory.Client.Pages.ExistsContact",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1416718260,
         "Kind": "Components.Component",
         "Name": "BlazorDirectory.Client.Pages.Index",
@@ -268,6 +169,105 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorDirectory.Client.Pages.ListContact",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1501890919,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.DeleteContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DeleteContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.DeleteContact"
+        }
+      },
+      {
+        "HashCode": -1397813266,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.DeleteContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDirectory.Client.Pages.DeleteContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.DeleteContact",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1844554059,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.AddContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AddContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.AddContact"
+        }
+      },
+      {
+        "HashCode": -1127205422,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.AddContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDirectory.Client.Pages.AddContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.AddContact",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -603226060,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.ExistsContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ExistsContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.ExistsContact"
+        }
+      },
+      {
+        "HashCode": 1145297952,
+        "Kind": "Components.Component",
+        "Name": "BlazorDirectory.Client.Pages.ExistsContact",
+        "AssemblyName": "BlazorDirectory.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDirectory.Client.Pages.ExistsContact"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDirectory.Client.Pages.ExistsContact",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

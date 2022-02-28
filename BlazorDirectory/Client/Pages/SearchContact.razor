@@ -8,8 +8,9 @@
     <DataAnnotationsValidator />
     <div class="form-group">
         <label>Nombre: </label>
-        <InputText @bind-Value=" name" />
-        <button type="submit" class="btn btn-success" @onclick="(() => SearchContacts(name))">Buscar Contacto</button>
+        <InputText @bind-Value="_contact.name" />
+        <ValidationMessage For="@(() => _contact.name)" />
+        <button type="submit" class="btn btn-success" @onclick="(() => SearchContacts(_contact.name))">Buscar Contacto</button>
     </div>
 </EditForm>
 
@@ -26,13 +27,20 @@
 @code {
     private Contact _contact = new Contact();
 
-    string message = "";
+    private string message = "";
     private string name = "";
-
-
     private async Task SearchContacts(string name)
     {
         string searchResponse = await Http.GetStringAsync($"https://localhost:7163/api/contact/searchContact/{name}");
-        message = searchResponse;
+
+        if (message == "")
+        {
+            message = "Se debe ingresar un nombre para buscarlo en el directorio.";
+        }
+        else
+        {
+            message = searchResponse;
+        }
     }
+
 }
