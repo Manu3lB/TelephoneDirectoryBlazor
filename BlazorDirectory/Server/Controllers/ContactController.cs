@@ -9,7 +9,6 @@ namespace BlazorTelephoneDirectory.Controller
     public class ContactController : ControllerBase
     {
         private readonly ContactContext _context;
-        private int size = 10;
         public ContactController(ContactContext context)
         {
             _context = context;
@@ -24,17 +23,9 @@ namespace BlazorTelephoneDirectory.Controller
         [HttpPost("addContact")]
         public IActionResult AddContact(Contact contact)
         {
-            int directoryCount = size - _context.Contacts.ToList().Count();
-            if (directoryCount > 0)
-            {
-                _context.Contacts.Add(contact);
-                _context.SaveChanges();
-                return Ok(_context.Contacts.ToList());
-            }
-            else
-            {
-                return NotFound("No hay espacio en la agenda");
-            }
+            _context.Contacts.Add(contact);
+            _context.SaveChanges();
+            return Ok(_context.Contacts.ToList());
         }
 
         [HttpGet("searchContact/{name}")]
@@ -90,41 +81,7 @@ namespace BlazorTelephoneDirectory.Controller
             return Ok("Contacto con el nombre " + name + " ha sido eliminado");
         }
 
-        [HttpGet("spaceContact")]
-        public string DirectoryWithSpace()
-        {
-            int directoryWithSpace = 0;
-            string message = "";
-            directoryWithSpace = size - _context.Contacts.ToList().Count();
-            if (directoryWithSpace > 0)
-            {
-                message = "Hay " + directoryWithSpace + " espacios para guardar contactos ";
-                return message;
-            }
-            else
-            {
-                message = "No quedan espacios en el directorio para guardar contactos";
-                return message;
-            }
-        }
-
-        [HttpGet("directoryFull")]
-        public string DirectoryFull()
-        {
-            int directoryCount = size - _context.Contacts.ToList().Count();
-            string message = "";
-            if (directoryCount > 0)
-            {
-                message = "La agenda aún conserva espacio para agregar contactos.";
-                return message;
-            }
-            else
-            {
-                message = "No hay espacio en la agenda.";
-                return message;
-            }
-        }
-
+        
         // [HttpPut("{id}")]
         // public IActionResult UpdateContact(int id, Contact contact)
         // {
