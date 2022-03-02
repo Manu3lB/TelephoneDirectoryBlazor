@@ -7,8 +7,9 @@ namespace BlazorDirectory.Shared
         [Key]
         public int ContactId {get; set;}
         [Required(ErrorMessage ="Este campo es obligatorio")]
-        [MaxLength(10, ErrorMessage = "El nombre no debe contener entre 3 y 10 caracteres")]
-        [MinLength(2, ErrorMessage = "El nombre no debe contener entre 3 y 10 caracteres")]
+        [MaxLength(50, ErrorMessage = "El nombre debe contener entre 3 y 50 letras")]
+        [MinLength(3, ErrorMessage = "El nombre debe contener entre 3 y 50 letras")]
+        // [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Solo se aceptan letras en el campo nombre")]
         public string name {get; set;}
         [Required(ErrorMessage ="Este campo es obligatorio")]
         [MaxLength(7, ErrorMessage = "Debe ingresar un número de telefono fijo 7 digitos. Gracias")]

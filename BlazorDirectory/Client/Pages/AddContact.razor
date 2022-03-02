@@ -5,11 +5,11 @@
 <h3>Agregar Contactos</h3>
 
 <EditForm Model="@_contact" OnValidSubmit="Post">
-    <DataAnnotationsValidator/>
+    <DataAnnotationsValidator />
     <div class="container-fluid">
         <div class="form-group" row mb-1>
             <label>Nombre Contacto </label>
-            <InputText class="form-control"  @bind-Value="_contact.name"/>
+            <InputText class="form-control" style="text-transform:uppercase;" @bind-Value="_contact.name" />
             <ValidationMessage For="@(() => _contact.name)" />
         </div>
         <div class="form-group" row mb-1>
@@ -29,11 +29,34 @@
     </div>
 </EditForm>
 
+<div class="alert alert-secondary mt-4">
+    <span class="oi oi-person me-2" aria-hidden="true"></span>
+    <strong>Información del contacto</strong><br><br>
+
+    <span class="text-nowrap">
+        <p>Mensaje : @message</p>
+    </span>
+</div>
+
 @code {
     private Contact _contact = new Contact();
+    private string upperName = "";
+
+    private string message = "";
     private async Task Post()
     {
-        await Http.PostAsJsonAsync<Contact>("/api/contact/addContact", _contact);
-        Navigation.NavigateTo($"/listContact");
+        upperName = _contact.name.ToUpper();
+        _contact.name = upperName;
+        string searchResponse = await Http.GetStringAsync($"https://localhost:7163/api/contact/searchContact/{_contact.name}");
+        if (searchResponse == _contact.name)
+        {
+            message = searchResponse+ " ya se encuentra el directorio telefonico no es necesario agregarlo nuevamente";
+        }
+        else
+        {
+            await Http.PostAsJsonAsync<Contact>("/api/contact/addContact", _contact);
+            @* message = "El contacto "+_contact.name+ " fue agregado con exito"; *@
+            Navigation.NavigateTo($"/ListContact");
+        }
     }
 }

@@ -20,12 +20,30 @@ namespace BlazorTelephoneDirectory.Controller
             return _context.Contacts.ToList();
         }
 
+        [HttpGet("listContact/{name}")]
+        public Contact GetContactListName(string name)
+        {
+            Contact contact = _context.Contacts.SingleOrDefault(e => e.name == name);
+            if (contact == null)
+            {
+                return new Contact();
+            }
+            return contact;
+        }
+
         [HttpPost("addContact")]
         public IActionResult AddContact(Contact contact)
         {
-            _context.Contacts.Add(contact);
-            _context.SaveChanges();
-            return Ok(_context.Contacts.ToList());
+            if (GetContactSearchName(contact.name) == contact.name)
+            {
+                return NotFound("Contacto existe en el directorio");
+            }
+            else
+            {
+                _context.Contacts.Add(contact);
+                _context.SaveChanges();
+                return Ok(_context.Contacts.ToList());
+            }
         }
 
         [HttpGet("searchContact/{name}")]
@@ -40,7 +58,7 @@ namespace BlazorTelephoneDirectory.Controller
                     message = "Contacto con el nombre de " + name + " no se encontro en el directorio";
                     return message;
                 }
-                message = "Contacto con el nombre de " + name + " se encuentra en el directorio";
+                message = name;
                 return message;
             }
             catch (System.Exception)
@@ -51,7 +69,7 @@ namespace BlazorTelephoneDirectory.Controller
             }
         }
 
-        [HttpGet("existContact/{name}")]
+        [HttpGet("existsContact/{name}")]
         public string GetContactExistName(string name)
         {
             var _contact = _context.Contacts.FirstOrDefault(x => x.name == name);
@@ -60,11 +78,11 @@ namespace BlazorTelephoneDirectory.Controller
             {
                 if (_contact != null)
                 {
-                    message = "El contacto si existe en el directorio";
+                    message = "Contacto con el nombre "+ name+ " existe";
                     return message;
                 }
             }
-            message = "No existe este contacto en el directorio";
+            message = "No existe " +name+ " en el directorio telefonico";
             return message;
         }
 
@@ -81,31 +99,43 @@ namespace BlazorTelephoneDirectory.Controller
             return Ok("Contacto con el nombre " + name + " ha sido eliminado");
         }
 
-        
-        // [HttpPut("{id}")]
-        // public IActionResult UpdateContact(int id, Contact contact)
+        // [HttpPost("deleteContact/{name}")]
+        // public IActionResult DeleteContact(Contact contact, string name)
         // {
-        //     var cont = _context.Contacts.SingleOrDefault(x => x.ContactId == id);
-        //     if (cont == null)
+        //     var _contact = _context.Contacts.SingleOrDefault(x => x.name == contact.name);
+        //     if (_contact == null)
         //     {
-        //         return NotFound("Contacto con el Id " + id + " no existe");
+        //         return NotFound("Contacto con el nombre " + contact.name + " no existe en el directorio");
         //     }
-        //     if (contact.name != null)
-        //     {
-        //         cont.name = contact.name;
-        //     }
-        //     if (contact.phoneNumber != null)
-        //     {
-        //         cont.phoneNumber = contact.phoneNumber;
-        //     }
-        //     if (contact.cellPhone != null)
-        //     {
-        //         cont.cellPhone = contact.cellPhone;
-        //     }
-
-        //     _context.Update(cont);
+        //     _context.Contacts.Remove(_contact);
         //     _context.SaveChanges();
-        //     return Ok("Contacto con el Id " + id + " actualido");
+        //     return Ok("Contacto con el nombre " + contact.name + " ha sido eliminado");
         // }
+
+
+        [HttpPut("updateContact/{name}")]
+        public IActionResult UpdateContact(Contact contact, string name)
+        {
+            var _contact = _context.Contacts.SingleOrDefault(x => x.name == name);
+            if (_contact == null)
+            {
+                return NotFound("Contacto con el nombre " + name + " no existe");
+            }
+            if (contact.name != null)
+            {
+                _contact.name = contact.name;
+            }
+            if (contact.phoneNumber != null)
+            {
+                _contact.phoneNumber = contact.phoneNumber;
+            }
+            if (contact.cellPhone != null)
+            {
+                _contact.cellPhone = contact.cellPhone;
+            }
+            _context.Update(_contact);
+            _context.SaveChanges();
+            return Ok("Contacto con el nombre " + name + " actualido");
+        }
     }
 }

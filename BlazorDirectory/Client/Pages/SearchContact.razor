@@ -8,7 +8,7 @@
     <DataAnnotationsValidator />
     <div class="form-group">
         <label>Nombre: </label>
-        <InputText @bind-Value="_contact.name" />
+        <InputText style="text-transform:uppercase;" @bind-Value="_contact.name" />
         <ValidationMessage For="@(() => _contact.name)" />
         <button type="submit" class="btn btn-success" @onclick="(() => SearchContacts(_contact.name))">Buscar
             Contacto</button>
@@ -21,26 +21,39 @@
     <strong>Información del contacto</strong><br><br>
 
     <span class="text-nowrap">
-        <p>Mensaje : @message</p>
+        <p>Mensaje : @message </p>
     </span>
+    <p>Telefono: @telephone</p>
+    <p>Celular: @cellPhone</p>
 </div>
 
 @code {
     private Contact _contact = new Contact();
-
     private string message = "";
     private string name = "";
+    private string upperName = "";
+    private string telephone = "0";
+    private string cellPhone = "0";
+
+    private string searchResponse = "";
     private async Task SearchContacts(string name)
     {
-            string searchResponse = await Http.GetStringAsync($"https://localhost:7163/api/contact/searchContact/{name}");
+        upperName = name.ToUpper();
+        name = upperName;
 
-            if (name == null || name == "")
-            {
-                message = "Se debe ingresar un nombre para buscarlo en el directorio.";
-            }
-            else
-            {
-                message = searchResponse;
-            }
+        _contact = await Http.GetFromJsonAsync<Contact>($"https://localhost:7163/api/contact/listContact/{name}");
+
+        searchResponse = await Http.GetStringAsync($"https://localhost:7163/api/contact/existsContact/{name}");
+
+        if (name == null || name == "")
+        {
+            message = "Se debe ingresar un nombre para buscarlo en el directorio.";
+        }
+        else
+        {
+            message = searchResponse;
+            telephone = _contact.phoneNumber;
+            cellPhone = _contact.cellPhone;
+        }
     }
 }
