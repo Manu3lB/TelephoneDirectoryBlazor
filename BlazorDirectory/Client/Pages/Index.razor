@@ -2,8 +2,27 @@
 
 <PageTitle>Index</PageTitle>
 
-<h1>Directorio telefonico!</h1>
+<h1 class="text-center">Directorio telefonico!</h1>
+<div class="text-center">
+    <img src="https://static.vecteezy.com/system/resources/previews/003/090/156/large_2x/contacts-book-and-phone-directory-vector.jpg" class="rounded" asp-append-version="true" width="300px"/>
+</div>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+<table class="table">
+    <thead>
+        <NavLink class="nav-link" href="AddContact">
+            <div class="p-3 mb-2 bg-primary text-white">Adicionar</div>
+        </NavLink>
+        <NavLink class="nav-link" href="ListContact">
+            <div class="p-3 mb-2 bg-success text-white">Listar</div>
+        </NavLink>
+        <NavLink class="nav-link" href="SearchContact">
+            <div class="p-3 mb-2 bg-warning text-dark">Buscar</div>
+        </NavLink>
+        <NavLink class="nav-link" href="ExistsContact">
+            <div class="p-3 mb-2 bg-dark text-white">Existe</div>
+        </NavLink>
+        <NavLink class="nav-link" href="DeleteContact">
+            <div class="p-3 mb-2 bg-danger text-white">Eliminar</div>
+        </NavLink>
+    </thead>
+</table>

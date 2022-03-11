@@ -61,6 +61,25 @@ namespace BlazorTelephoneDirectory
             }
         }
 
+         public Boolean GetContactExistName2(Contact contact)
+        {
+            var _contact = _context.Contacts.FirstOrDefault(f => f.name == contact.name);
+            string message = "";
+            bool existsContact = false;
+
+            if (_contact == null)
+            {
+                message = "No existe " + contact + " en el directorio telefonico";
+                return existsContact;
+            }
+            else
+            {
+                message = "Contacto con el nombre " + contact.name + " existe";
+                existsContact = true;
+                return existsContact;
+            }
+        }
+
         public Boolean GetContactExistName(string name)
         {
             var _contact = _context.Contacts.FirstOrDefault(f => f.name == name);

@@ -51,6 +51,12 @@ namespace BlazorTelephoneDirectory.Controllers
             return business.GetContactExistName(name);
         }
 
+        [HttpGet("existsContact2/GetContactExistName")]
+        public bool GetContactSearchName2(Contact contact)
+        {
+            return business.GetContactExistName2(contact);
+        }
+
         [HttpDelete("deleteContact/{name}")]
         public string DeleteContact(string name)
         {
