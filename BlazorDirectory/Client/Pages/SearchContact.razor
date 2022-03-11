@@ -4,13 +4,13 @@
 @* @inject NavigationManager Navigation *@
 <h3>Buscar contacto</h3>
 
-<EditForm Model="@_contact">
+<EditForm Model="@searchContact">
     <DataAnnotationsValidator />
     <div class="form-group">
         <label>Nombre: </label>
-        <InputText style="text-transform:uppercase;" @bind-Value="_contact.name" />
-        <ValidationMessage For="@(() => _contact.name)" />
-        <button type="submit" class="btn btn-success" @onclick="(() => SearchContacts(_contact.name))">Buscar
+        <InputText style="text-transform:uppercase;" @bind-Value="searchContact.name" />
+        <ValidationMessage For="@(() => searchContact.name)" />
+        <button type="submit" class="btn btn-success" @onclick="(() => SearchContacts(searchContact.name))">Buscar
             Contacto</button>
     </div>
 </EditForm>
@@ -22,38 +22,52 @@
 
     <span class="text-nowrap">
         <p>Mensaje : @message </p>
+        <p>Nombre: @nameS1</p>
+        <p>Telefono: @telephone</p>
+        <p>Celular: @cellPhone</p>
     </span>
-    <p>Telefono: @telephone</p>
-    <p>Celular: @cellPhone</p>
 </div>
 
 @code {
-    private Contact _contact = new Contact();
+    Contact searchContact = new Contact();
     private string message = "";
-    private string name = "";
+    private string nameS = "";
+    private string nameS1 = "";
     private string upperName = "";
     private string telephone = "0";
     private string cellPhone = "0";
-
-    private string searchResponse = "";
-    private async Task SearchContacts(string name)
+    private async Task SearchContacts(string nameS)
     {
-        upperName = name.ToUpper();
-        name = upperName;
+        upperName = nameS.ToUpper();
+        nameS = upperName;
 
-        _contact = await Http.GetFromJsonAsync<Contact>($"https://localhost:7163/api/contact/listContact/{name}");
-
-        searchResponse = await Http.GetStringAsync($"https://localhost:7163/api/contact/existsContact/{name}");
-
-        if (name == null || name == "")
+        if (nameS == "")
         {
-            message = "Se debe ingresar un nombre para buscarlo en el directorio.";
+            message = "No se puede realizar la busqueda con el campo vacio";
+            nameS1 = " ";
+            telephone = " ";
+            cellPhone = " ";
         }
         else
         {
-            message = searchResponse;
-            telephone = _contact.phoneNumber;
-            cellPhone = _contact.cellPhone;
+            searchContact = await Http.GetFromJsonAsync<Contact>($"https://localhost:7163/api/contact/searchContact/{nameS}");
+
+            var message2 = searchContact;
+
+            if (searchContact.name == "")
+            {
+                message = "No se encontro el contacto " + nameS + " en el directorio.";
+                nameS1 = "No existe en el directorio";
+                telephone = "0";
+                cellPhone = "0";
+            }
+            else
+            {
+                message = "El contacto " + nameS + " se encuentra en el directorio con los siguientes datos";
+                nameS1 = nameS;
+                telephone = searchContact.phoneNumber;
+                cellPhone = searchContact.cellPhone;
+            }
         }
     }
 }
