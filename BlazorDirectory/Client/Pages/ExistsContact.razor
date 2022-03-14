@@ -34,20 +34,19 @@
 
     private async Task ExistsContacts(string name)
     {
-        upperName = name.ToUpper();
-        name = upperName;
-
-        nameExists = nameEmpty(name);
-
-        var existsResponse = await
-        Http.GetFromJsonAsync<bool>($"https://localhost:7163/api/contact/existsContact/{nameExists}");
-
-        if (nameExists == "0")
+        if (name == "")
         {
             message = "El campo no puede ser vacio";
         }
         else
         {
+            upperName = name.ToUpper();
+            name = upperName;
+
+            nameExists = nameEmpty(name);
+
+            var existsResponse = await
+            Http.GetFromJsonAsync<bool>($"https://localhost:7163/api/contact/existsContact/{nameExists}");
             if (existsResponse)
             {
 
